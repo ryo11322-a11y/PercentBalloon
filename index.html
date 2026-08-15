@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- iPhone / iPad対応 -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>パーセントバルーン</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ==========================
+         ヘッダー
+    =========================== -->
+
+    <header>
+
+        <h1>🎈 パーセントバルーン</h1>
+
+        <div id="questionNumber">
+            第1問 / 10問
+        </div>
+
+        <div id="question">
+            問題
+        </div>
+
+        <div id="correctAnswer">
+            正解：未発表
+        </div>
+
+    </header>
+
+
+    <!-- ==========================
+         班の回答入力
+    =========================== -->
+
+    <main>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>班</th>
+                        <th>回答</th>
+                        <th>誤差</th>
+                        <th>今回の得点</th>
+                        <th>総合得点</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="teamTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- メッセージ -->
+
+        <div id="message">
+            各班の回答を入力してください。
+        </div>
+
+
+        <!-- ボタン -->
+
+        <div class="buttons">
+
+            <button
+                id="resultButton"
+                onclick="showResult()">
+                正解発表
+            </button>
+
+            <button
+                id="nextButton"
+                onclick="nextQuestion()"
+                disabled>
+                次の問題
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ==========================
+     最終結果モーダル
+=========================== -->
+
+<div id="resultModal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <h1>🎉 最終結果 🎉</h1>
+
+        <div id="finalResult"></div>
+
+        <button onclick="closeModal()">
+            閉じる
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
